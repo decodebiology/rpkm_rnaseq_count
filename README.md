@@ -3,9 +3,12 @@
 
 RPKM for RNAseq V1.3
 
-<b><u>USAGE for sample input provided:</u></b> <br><i>perl rpkm_script_beta.pl sample_count_test.count 2:9 28 > sample_count_test.rpkm</i>
+<b><u>Usage for sample input provided:</u></b> <br><i>perl rpkm_script_beta.pl sample_count_test.count 2:9 28 > sample_count_test.rpkm</i>
 
-<b><u>USAGE:</u></b> <br><i>perl rpkm_script_beta.pl input_count_file.txt ActualColumnStart:ActualColumnEnd ColumnGeneLength > OUTPUT_RPKM_FILE </i>
+<b>Description<b>
+<p>In above example 'sample_count_test.count' file has coun data from 2 to 9th column; 28th column has length of each genes calculated from Gencode GTF (Note below).</p>
+
+<b><u>General usage:</u></b> <br><i>perl rpkm_script_beta.pl input_count_file.txt ActualColumnStart:ActualColumnEnd ColumnGeneLength > OUTPUT_RPKM_FILE </i>
 
 
 <i>ActualColumnStart</i> = For example you have GeneID in first column and counts starts from second column. This should be '2'
