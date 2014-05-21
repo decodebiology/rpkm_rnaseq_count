@@ -13,8 +13,11 @@ RPKM calculation:
 RPKM = (10^9 * C)/(N * L), where
 
 C = Number of reads mapped to a gene
+
 N = Total mapped reads in the experiment
+
 L = gene length in base-pairs for a gene
+
 
 
 
