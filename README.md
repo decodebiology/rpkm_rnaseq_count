@@ -21,19 +21,21 @@ RPKM for RNAseq V1.3
 
 <h4><u>**NOTE: Steps to prepare your input</u></h4>
 
-
-1) Length of the gene can be obtained from Gencode GTF by following command (Successfully tested upto Gencode V19):
+<ul>
+<li>Length of the gene can be obtained from Gencode GTF by following command (Successfully tested upto Gencode V19)</li>
 
 <i>cat gencode.vXX.annotation.gtf | awk -F'\t' '{if($3=="gene") {split($9,a,";"); print a[1]"\t"$5-$4};}' | sed 's/[gene_id |"|]//g' > YOUR_GENE_LENGTH_FILE<i>
 
 
-2) Join OUTPUT_RPKM_FILE and YOUR_GENE_LENGTH_FILE by GeneID or First column
+<li>Join OUTPUT_RPKM_FILE and YOUR_GENE_LENGTH_FILE by GeneID or First column</li>
 
 <i>join -j1  <(sort OUTPUT_RPKM_FILE) <(sort YOUR_GENE_LENGTH_FILE) > OUTPUT_ANNOTATED_RPKM_FILE</i>
 
-3) Run the script over OUTPUT_ANNOTATED_RPKM_FILE
+<li>Run the script over OUTPUT_ANNOTATED_RPKM_FILE</li>
 
 <i>perl rpkm_script_beta.pl OUTPUT_ANNOTATED_RPKM_FILE ActualColumnStart:ActualColumnEnd ColumnGeneLength</i>
+
+</ul>
 
 <b>Description</b>
 
