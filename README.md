@@ -1,7 +1,7 @@
 RPKM_normalization
 =================
 
-RPKM for RNAseq V1.2
+RPKM for RNAseq V1.3
 
 USAGE for sample input provided: perl rpkm_script_beta.pl sample_count_test.count 2:9 15 > sample_count_test.rpkm
 
