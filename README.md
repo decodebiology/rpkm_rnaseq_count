@@ -30,7 +30,7 @@ RPKM for RNAseq V1.3
 <i>cat gencode.vXX.annotation.gtf | awk -F'\t' '{if($3=="gene") {split($9,a,";"); print a[1]"\t"$5-$4};}' | sed 's/[gene_id |"|]//g' > YOUR_GENE_LENGTH_FILE<i>
 
 
-<li>Join OUTPUT_RPKM_FILE and YOUR_GENE_LENGTH_FILE by GeneID or First column</li>
+<li>Combine OUTPUT_RPKM_FILE and YOUR_GENE_LENGTH_FILE by GeneID or First column</li>
 
 <i>join -j1  <(sort OUTPUT_RPKM_FILE) <(sort YOUR_GENE_LENGTH_FILE) > OUTPUT_ANNOTATED_RPKM_FILE</i>
 
