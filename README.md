@@ -3,20 +3,19 @@
 
 RPKM for RNAseq V1.3
 
-<b><u>Usage for sample input provided:</u></b> <br><pre><i>perl rpkm_script_beta.pl sample_count_test.count 2:9 28 > sample_count_test.rpkm</i>
+<b><u>Usage for sample input provided:</u></b> <br><pre><i>perl rpkm_script_beta.pl sample_count_test.count 2:9 28 > sample_count_test.rpkm</i></pre>
 
 <b>Description<b>
-<p>In above example 'sample_count_test.count' file has count data from 2 to 9th column;<br> 28th column has length of each genes calculated from Gencode GTF (Note below).</p></pre>
+<p>In above example 'sample_count_test.count' file has count data from 2 to 9th column;<br> 28th column has length of each genes calculated from Gencode GTF (Note below).</p>
 
-<b><u>General usage:</u></b> <br><pre><i>perl rpkm_script_beta.pl input_count_file.txt ActualColumnStart:ActualColumnEnd ColumnGeneLength > OUTPUT_RPKM_FILE </i>
+<b><u>General usage:</u></b> <br><pre><i>perl rpkm_script_beta.pl input_count_file.txt ActualColumnStart:ActualColumnEnd ColumnGeneLength > OUTPUT_RPKM_FILE </i></pre>
 
 
 <i>ActualColumnStart</i> = For example you have GeneID in first column and counts starts from second column. This should be '2'
 
 <i>ActualColumnEnd</i> = Upto which column you need RPKM
 
-<i>ColumnGeneLength</i> = Length of each gene (**NOTE below)</pre>
-
+<i>ColumnGeneLength</i> = Length of each gene (**NOTE below)
 
 
 
@@ -27,7 +26,7 @@ RPKM for RNAseq V1.3
 <ol>
 <li>Length of the gene can be obtained from Gencode GTF by following command (Successfully tested upto Gencode V19)</li>
 
-<i>cat gencode.vXX.annotation.gtf | awk -F'\t' '{if($3=="gene") {split($9,a,";"); print a[1]"\t"$5-$4};}' | sed 's/[gene_id |"|]//g' > YOUR_GENE_LENGTH_FILE<i>
+<pre><i>cat gencode.vXX.annotation.gtf | awk -F'\t' '{if($3=="gene") {split($9,a,";"); print a[1]"\t"$5-$4};}' | sed 's/[gene_id |"|]//g' > YOUR_GENE_LENGTH_FILE<i></pre>
 
 
 <li>Combine OUTPUT_RPKM_FILE and YOUR_GENE_LENGTH_FILE by GeneID or First column</li>
@@ -36,7 +35,7 @@ RPKM for RNAseq V1.3
 
 <li>Run the script over OUTPUT_ANNOTATED_RPKM_FILE</li>
 
-<i>perl rpkm_script_beta.pl OUTPUT_ANNOTATED_RPKM_FILE ActualColumnStart:ActualColumnEnd ColumnGeneLength</i>
+<pre><i>perl rpkm_script_beta.pl OUTPUT_ANNOTATED_RPKM_FILE ActualColumnStart:ActualColumnEnd ColumnGeneLength</i></pre>
 
 </ol>
 
