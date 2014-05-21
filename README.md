@@ -31,7 +31,7 @@ RPKM for RNAseq V1.3
 
 <li>Combine OUTPUT_RPKM_FILE and YOUR_GENE_LENGTH_FILE by GeneID or First column</li>
 
-<i>join -j1  <(sort OUTPUT_RPKM_FILE) <(sort YOUR_GENE_LENGTH_FILE) > OUTPUT_ANNOTATED_RPKM_FILE</i>
+<pre><i>join -j1  &lt;&lt;(sort OUTPUT_RPKM_FILE) &lt;&lt;(sort YOUR_GENE_LENGTH_FILE) &gt; OUTPUT_ANNOTATED_RPKM_FILE</i></pre>
 
 <li>Run the script over OUTPUT_ANNOTATED_RPKM_FILE</li>
 
