@@ -27,7 +27,7 @@ L = gene length in base-pairs for a gene
 
 **NOTE: Length of the gene can be obtained from Gencode GTF by following command (Successfully tested upto Gencode V19):
 
-cat gencode.vXX.annotation.gtf | grep -P "\tgene\t" | awk -F'\t' '{split($9,a,";");print a[1]"\t"$5-$4}' | sed 's/[gene_id |"|]//g' > geneWithLength.txt
+cat gencode.vXX.annotation.gtf | awk -F'\t' '{if($3=="gene") {split($9,a,";"); print a[1]"\t"$5-$4};}' | sed 's/[gene_id |"|]//g' > geneWithLength.txt
 
 
 
