@@ -15,21 +15,11 @@ ColumnGeneLength = Length of each gene (**NOTE below)
 
 
 
-RPKM calculation:
-
-
-RPKM = (10^9 * C)/(N * L), where
-
-C = Number of reads mapped to a gene
-
-N = Total mapped reads in the experiment
-
-L = gene length in base-pairs for a gene
-
 
 
 
 **NOTE: Steps to prepare your input
+===================================
 
 1) Length of the gene can be obtained from Gencode GTF by following command (Successfully tested upto Gencode V19):
 
@@ -42,12 +32,26 @@ cat gencode.vXX.annotation.gtf | awk -F'\t' '{if($3=="gene") {split($9,a,";"); p
 3) perl rpkm_script_beta.pl OUTPUT_ANNOTATED_COUNT_FILE ActualColumnStart:ActualColumnEnd ColumnGeneLength
 
 Description: 
-
+------------
 ActualColumnStart = For example you have GeneID in first column and counts starts from second column. This should be '2'
 
 ActualColumnEnd = Upto which column you need RPKM
 
 ColumnGeneLength = Length of each gene
+
+
+
+
+RPKM calculation:
+================
+
+RPKM = (10^9 * C)/(N * L), where
+
+C = Number of reads mapped to a gene
+
+N = Total mapped reads in the experiment
+
+L = gene length in base-pairs for a gene
 
 
 Author: Santhilal Subhash
