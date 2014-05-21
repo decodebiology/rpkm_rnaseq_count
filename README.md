@@ -8,11 +8,11 @@ RPKM for RNAseq V1.3
 <b>USAGE:</b> <br><i>perl rpkm_script_beta.pl input_count_file.txt ActualColumnStart:ActualColumnEnd ColumnGeneLength > results.rpkm</i>
 
 
-ActualColumnStart = For example you have GeneID in first column and counts starts from second column. This should be '2'
+<i>ActualColumnStart</i> = For example you have GeneID in first column and counts starts from second column. This should be '2'
 
-ActualColumnEnd = Upto which column you need RPKM
+<i>ActualColumnEnd</i> = Upto which column you need RPKM
 
-ColumnGeneLength = Length of each gene (**NOTE below)
+<i>ColumnGeneLength</i> = Length of each gene (**NOTE below)
 
 
 
@@ -32,8 +32,8 @@ cat gencode.vXX.annotation.gtf | awk -F'\t' '{if($3=="gene") {split($9,a,";"); p
 
 3) perl rpkm_script_beta.pl OUTPUT_ANNOTATED_COUNT_FILE ActualColumnStart:ActualColumnEnd ColumnGeneLength
 
-Description: 
-------------
+<b>Description</b>
+
 ActualColumnStart = For example you have GeneID in first column and counts starts from second column. This should be '2'
 
 ActualColumnEnd = Upto which column you need RPKM
