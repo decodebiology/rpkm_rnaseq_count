@@ -3,7 +3,7 @@
 #use warnings;
 #Author: Santhilal Subhash
 #Contact: santhilal.subhash@gu.se
-#RPKM for RNAseq V1.2
+#RPKM for RNAseq V1.3
 #USAGE for sample input provided: perl rpkm_script_beta.pl sample_count_test.count 2:9 15 > sample_count_test.rpkm
 #USAGE: perl rpkm_script_beta.pl input_count_file.txt ActualColumnStart:ActualColumnEnd ColumnGeneLength > results.rpkm
 open $fh1, '<', $ARGV[0] or die $!;
