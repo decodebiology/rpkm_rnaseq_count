@@ -21,7 +21,7 @@ RPKM for RNAseq V1.3
 
 <h4><u>**NOTE: Steps to prepare your input</u></h4>
 
-<ul>
+<ol>
 <li>Length of the gene can be obtained from Gencode GTF by following command (Successfully tested upto Gencode V19)</li>
 
 <i>cat gencode.vXX.annotation.gtf | awk -F'\t' '{if($3=="gene") {split($9,a,";"); print a[1]"\t"$5-$4};}' | sed 's/[gene_id |"|]//g' > YOUR_GENE_LENGTH_FILE<i>
@@ -35,7 +35,7 @@ RPKM for RNAseq V1.3
 
 <i>perl rpkm_script_beta.pl OUTPUT_ANNOTATED_RPKM_FILE ActualColumnStart:ActualColumnEnd ColumnGeneLength</i>
 
-</ul>
+</ol>
 
 <b>Description</b>
 
