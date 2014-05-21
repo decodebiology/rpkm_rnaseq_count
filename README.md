@@ -5,7 +5,7 @@ RPKM for RNAseq V1.3
 
 <b>USAGE for sample input provided:</b> <br><i>perl rpkm_script_beta.pl sample_count_test.count 2:9 28 > sample_count_test.rpkm</i>
 
-<b>USAGE:<b> <br><i>perl rpkm_script_beta.pl input_count_file.txt ActualColumnStart:ActualColumnEnd ColumnGeneLength > results.rpkm</i>
+<b>USAGE:</b> <br><i>perl rpkm_script_beta.pl input_count_file.txt ActualColumnStart:ActualColumnEnd ColumnGeneLength > results.rpkm</i>
 
 
 ActualColumnStart = For example you have GeneID in first column and counts starts from second column. This should be '2'
