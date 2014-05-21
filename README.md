@@ -5,7 +5,7 @@ RPKM for RNAseq V1.3
 
 <b>USAGE for sample input provided:</b> <br><i>perl rpkm_script_beta.pl sample_count_test.count 2:9 28 > sample_count_test.rpkm</i>
 
-<b>USAGE:</b> <br><i>perl rpkm_script_beta.pl input_count_file.txt ActualColumnStart:ActualColumnEnd ColumnGeneLength > results.rpkm</i>
+<b>USAGE:</b> <br><i>perl rpkm_script_beta.pl input_count_file.txt ActualColumnStart:ActualColumnEnd ColumnGeneLength > OUTPUT_RPKM_FILE </i>
 
 
 <i>ActualColumnStart</i> = For example you have GeneID in first column and counts starts from second column. This should be '2'
@@ -24,12 +24,16 @@ RPKM for RNAseq V1.3
 
 1) Length of the gene can be obtained from Gencode GTF by following command (Successfully tested upto Gencode V19):
 
-<i>cat gencode.vXX.annotation.gtf | awk -F'\t' '{if($3=="gene") {split($9,a,";"); print a[1]"\t"$5-$4};}' | sed 's/[gene_id |"|]//g' > geneWithLength.txt<i>
+<i>cat gencode.vXX.annotation.gtf | awk -F'\t' '{if($3=="gene") {split($9,a,";"); print a[1]"\t"$5-$4};}' | sed 's/[gene_id |"|]//g' > YOUR_GENE_LENGTH_FILE<i>
 
 
-2) <i>join -j1  <(sort YOUR_COUNT_FILE) <(sort YOUR_GENE_LENGTH_FILE) > OUTPUT_ANNOTATED_COUNT_FILE</i>
+2) Join OUTPUT_RPKM_FILE and YOUR_GENE_LENGTH_FILE by GeneID or First column
 
-3) <i>perl rpkm_script_beta.pl OUTPUT_ANNOTATED_COUNT_FILE ActualColumnStart:ActualColumnEnd ColumnGeneLength</i>
+<i>join -j1  <(sort OUTPUT_RPKM_FILE) <(sort YOUR_GENE_LENGTH_FILE) > OUTPUT_ANNOTATED_RPKM_FILE</i>
+
+3) Run the script over OUTPUT_ANNOTATED_RPKM_FILE
+
+<i>perl rpkm_script_beta.pl OUTPUT_ANNOTATED_RPKM_FILE ActualColumnStart:ActualColumnEnd ColumnGeneLength</i>
 
 <b>Description</b>
 
