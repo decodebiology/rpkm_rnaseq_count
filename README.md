@@ -19,7 +19,7 @@ RPKM for RNAseq V1.3
 
 
 
-<h2><u>**NOTE: Steps to prepare your input</u></h2>
+<h4><u>**NOTE: Steps to prepare your input</u></h4>
 
 
 1) Length of the gene can be obtained from Gencode GTF by following command (Successfully tested upto Gencode V19):
@@ -42,7 +42,7 @@ RPKM for RNAseq V1.3
 
 
 
-<h2><u>RPKM calculation</u></h2>
+<h4><u>RPKM calculation</u></h4>
 
 
 RPKM = (10^9 * C)/(N * L), where
