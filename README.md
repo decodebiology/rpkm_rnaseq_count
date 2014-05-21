@@ -1,4 +1,4 @@
-rpkm_rnaseq_count
+RPKM_normalization
 =================
 
 RPKM for RNAseq V1.2
