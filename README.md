@@ -8,7 +8,9 @@ USAGE for sample input provided: perl rpkm_script_beta.pl sample_count_test.coun
 USAGE: perl rpkm_script_beta.pl input_count_file.txt ActualColumnStart:ActualColumnEnd ColumnGeneLength > results.rpkm
 
 ActualColumnStart = For example you have GeneID in first column and counts starts from second column. This should be '2'
+
 ActualColumnEnd = Upto which column you need RPKM
+
 ColumnGeneLength = Length of each gene (**NOTE below)
 
 
