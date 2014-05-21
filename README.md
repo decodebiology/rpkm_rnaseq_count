@@ -24,21 +24,20 @@ RPKM for RNAseq V1.3
 
 1) Length of the gene can be obtained from Gencode GTF by following command (Successfully tested upto Gencode V19):
 
-cat gencode.vXX.annotation.gtf | awk -F'\t' '{if($3=="gene") {split($9,a,";"); print a[1]"\t"$5-$4};}' | sed 's/[gene_id |"|]//g' > geneWithLength.txt
+<i>cat gencode.vXX.annotation.gtf | awk -F'\t' '{if($3=="gene") {split($9,a,";"); print a[1]"\t"$5-$4};}' | sed 's/[gene_id |"|]//g' > geneWithLength.txt<i>
 
 
-2) join -j1  <(sort YOUR_COUNT_FILE) <(sort YOUR_GENE_LENGTH_FILE) > OUTPUT_ANNOTATED_COUNT_FILE
+2) <i>join -j1  <(sort YOUR_COUNT_FILE) <(sort YOUR_GENE_LENGTH_FILE) > OUTPUT_ANNOTATED_COUNT_FILE</i>
 
-
-3) perl rpkm_script_beta.pl OUTPUT_ANNOTATED_COUNT_FILE ActualColumnStart:ActualColumnEnd ColumnGeneLength
+3) <i>perl rpkm_script_beta.pl OUTPUT_ANNOTATED_COUNT_FILE ActualColumnStart:ActualColumnEnd ColumnGeneLength</i>
 
 <b>Description</b>
 
-ActualColumnStart = For example you have GeneID in first column and counts starts from second column. This should be '2'
+<i>ActualColumnStart</i> = For example you have GeneID in first column and counts starts from second column. This should be '2'
 
-ActualColumnEnd = Upto which column you need RPKM
+<i>ActualColumnEnd</i> = Upto which column you need RPKM
 
-ColumnGeneLength = Length of each gene
+<i>ColumnGeneLength</i> = Length of each gene
 
 
 
