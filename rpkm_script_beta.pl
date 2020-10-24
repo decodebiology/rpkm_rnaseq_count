@@ -41,7 +41,7 @@ while (<$fh2>)
 		{
 			if($array[$i]!=0)
 			{
-				$array_rpkm[$i]=((1000000000*$array[$i])/($libarray[$i]*$array[$len_col-1]));
+				$array_rpkm[$i]=((1000000*$array[$i])/($libarray[$i]*$array[$len_col-1]));
 			}
 			else
 			{
