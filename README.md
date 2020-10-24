@@ -1,3 +1,6 @@
+Update 2020/10/24: You can also use simplified and faster version of normalization script from <a href="https://gist.github.com/decodebiology/e5b9b0d9f4d0b3288338998676122f91">here</a>.
+
+
 <h1><u>RPKM_normalization</u></h1>
 
 
@@ -53,7 +56,7 @@ RPKM for RNAseq V1.3
 <h4><u>RPKM calculation</u></h4>
 
 
-RPKM = (10^9 * C)/(N * L), where
+RPKM = (10^6 * C)/(N * L), where
 
 C = Number of reads mapped to a gene
 
@@ -64,5 +67,4 @@ L = gene length in base-pairs for a gene
 
 Author: Santhilal Subhash
 
-Contact: santhilal.subhash@gu.se
 
